@@ -1,0 +1,36 @@
+{
+  "name": "projetoapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "db:init": "tsx src/database/init.ts",
+    "db:seed": "tsx src/database/seed.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daviponteslopes12-web/ProjetoAPI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/daviponteslopes12-web/ProjetoAPI/issues"
+  },
+  "homepage": "https://github.com/daviponteslopes12-web/ProjetoAPI#readme",
+  "dependencies": {
+    "express": "^5.3.0",
+    "mysql2": "^3.24.6",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
