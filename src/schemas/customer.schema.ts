@@ -13,7 +13,7 @@ export const createCustomerSchema = z.object({
   name: z.string().min(1),
   email: z.string().email(),
   phone: z.string()
-  .transform(value => value.trim() === "" ? null : value).nullable()
+    .transform(value => value.trim() === "" ? null : value).nullable()
 });
 
 export const updateCustomerSchema = createCustomerSchema.partial();

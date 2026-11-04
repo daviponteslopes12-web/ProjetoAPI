@@ -1,21 +1,21 @@
 import { db } from '../config/database';
 import {
-    Product,
-    CreateProductInput,
-    UpdateProductInput,
+  Product,
+  CreateProductInput,
+  UpdateProductInput,
 } from '../models/product.model';
 
 export const productRepository = {
-    findAll(): Promise<Product[]> {
-        return new Promise((resolve, reject) => {
-            db.all('SELECT * FROM products ORDER BY id', (err, rows: Product[]) => {
-                if (err) reject(err);
-                else resolve(rows);
-            });
-        });
-    },
+  findAll(): Promise<Product[]> {
+    return new Promise((resolve, reject) => {
+      db.all('SELECT * FROM products ORDER BY id', (err, rows: Product[]) => {
+        if (err) reject(err);
+        else resolve(rows);
+      });
+    });
+  },
 
-    findById(id: number): Promise<Product | null> {
+  findById(id: number): Promise<Product | null> {
     return new Promise((resolve, reject) => {
       db.get(
         'SELECT * FROM products WHERE id = ?',
