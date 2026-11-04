@@ -47,7 +47,7 @@ export const customerRepository = {
     return new Promise((resolve, reject) => {
       const fields: string[] = [];
       const values: unknown[] = [];
-      if (input.name !== undefined)  { fields.push("name = ?");  values.push(input.name); }
+      if (input.name !== undefined) { fields.push("name = ?"); values.push(input.name); }
       if (input.email !== undefined) { fields.push("email = ?"); values.push(input.email); }
       if (input.phone !== undefined) { fields.push("phone = ?"); values.push(input.phone); }
       if (fields.length === 0) return customerRepository.findById(id).then(resolve).catch(reject);
